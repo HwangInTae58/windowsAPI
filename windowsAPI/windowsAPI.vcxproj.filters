@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{bead61fc-ea66-4fc8-89ba-bc11f07c9ef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core">
+      <UniqueIdentifier>{902f7874-160c-4c73-ab38-7286be56d069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{bfdd9b6e-bcb5-45cf-a562-846ecf7ec7df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Manager">
+      <UniqueIdentifier>{79f42acc-d5f4-4f85-b493-570db66f4706}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -27,10 +39,34 @@
     <ClInclude Include="windowsAPI.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="SingleTon.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="CCore.h">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeManager.h">
+      <Filter>Engine\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CenterPoint.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="CKeyManager.h">
+      <Filter>Engine\Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="windowsAPI.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CCore.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeManager.cpp">
+      <Filter>Engine\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CKeyManager.cpp">
+      <Filter>Engine\Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
