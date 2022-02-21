@@ -27,14 +27,17 @@ void CCore::update()
 	{
 		pos.x -= 3 * DT;
 	}
+
 	if (KEY(VK_RIGHT))
 	{
 		pos.x += 3 * DT;
 	}
+
 	if (KEY(VK_UP))
 	{
 		pos.y += 3 * DT;
 	}
+
 	if (KEY(VK_DOWN))
 	{
 		pos.y -= 3 * DT;

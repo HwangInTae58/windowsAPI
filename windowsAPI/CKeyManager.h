@@ -1,5 +1,6 @@
 #pragma once
 #define VKEY_SIZE  0xFF //Å°ÀÇ °¹¼ö
+
 class CKeyManager
 {
 	SINGLETON(CKeyManager);

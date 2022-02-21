@@ -13,6 +13,9 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
+#include <string.h>
+
+using namespace std;
 
 #include "SingleTon.h"
 #include "CCore.h"
@@ -29,11 +32,12 @@
 #define	WINSIZEY	720
 #define WINSTYLE	WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
 
-#define DT			CTimeManager::getInst()->GetDT();
+#define DT							CTimeManager::getInst()->GetDT();
 
-#define KEY			CKeyManager::getInst()->GetButton(vk_key);
-#define KEYDOWN			CKeyManager::getInst()->GetButtonDown(vk_key);
-#define KEYUP			CKeyManager::getInst()->GetButtonUP(vk_key);
+template<typename T>
+constexpr auto KEY(T vk_key) { return CKeyManager::getInst()->GetButton(vk_key);; }
+#define KEYDOWN(vk_key)				CKeyManager::getInst()->GetButtonDown(vk_key);
+#define KEYUP(vk_key)				CKeyManager::getInst()->GetButtonUP(vk_key);
 //========================================
 //## 전역변수(인스턴스, 윈도우 핸들)	##
 //========================================
