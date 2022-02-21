@@ -1,10 +1,12 @@
 #pragma once
+#define VKEY_SIZE  0xFF //키의 갯수
 class CKeyManager
 {
 	SINGLETON(CKeyManager);
 private:
-	bool m_arrPrevKey[/*키의 갯수*/]; //이전 키의 입력상태를 저장
-	bool m_arrCurKey[/*키의 갯수*/];  //현재 키의 입력상태를 저장할 배열
+	
+	bool m_arrPrevKey[VKEY_SIZE]; //이전 키의 입력상태를 저장
+	bool m_arrCurKey[VKEY_SIZE];  //현재 키의 입력상태를 저장할 배열
 public:
 	void update();
 	void init();

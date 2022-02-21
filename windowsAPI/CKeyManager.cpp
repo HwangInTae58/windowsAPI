@@ -3,7 +3,10 @@
 
 CKeyManager::CKeyManager()
 {
-
+	for (int key = 0; key < VKEY_SIZE; key++) {
+		m_arrPrevKey[key] = false;
+		m_arrCurKey[key] = false;
+	}
 }
 CKeyManager::~CKeyManager()
 {
@@ -12,6 +15,29 @@ CKeyManager::~CKeyManager()
 
 void CKeyManager::update()
 {
+	// GetFocus 지금 활성화된 핸들값을 가져오는 함수
+	HWND curWnd = GetFocus();
+	if (hWnd != curWnd) {
+		//윈도우가 선택된 상태가 아니라면 모든 키입력을 false해준다
+		for (int key = 0; key < VKEY_SIZE; key++)
+		{
+			m_arrPrevKey[key] = m_arrCurKey[key];
+			m_arrCurKey[key] = false;
+		}
+		return;
+	}
+	for (int key = 0; key < VKEY_SIZE; key++)
+	{
+		m_arrPrevKey[key] = m_arrCurKey[key];
+		if (GetAsyncKeyState(key) & 0x8000)
+		{
+			m_arrCurKey[key] = true;
+		}
+		else
+		{
+			m_arrCurKey[key] = false;
+		}
+	}
 }
 
 void CKeyManager::init()

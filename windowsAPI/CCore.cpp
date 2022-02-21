@@ -23,21 +23,21 @@ void CCore::update()
 {
 	CTimeManager::getInst()->update();
 	CKeyManager::getInst()->update();
-	if (CKeyManager::getInst()->GetButton(VK_LEFT))
+	if (KEY(VK_LEFT))
 	{
-		pos.x -= 3 * CTimeManager::getInst()->GetDT();
+		pos.x -= 3 * DT;
 	}
-	if (WM_KEYDOWN == VK_RIGHT)
+	if (KEY(VK_RIGHT))
 	{
-		pos.x += 3;
+		pos.x += 3 * DT;
 	}
-	if (WM_KEYDOWN == VK_UP)
+	if (KEY(VK_UP))
 	{
-		pos.y += 3;
+		pos.y += 3 * DT;
 	}
-	if (WM_KEYDOWN == VK_DOWN)
+	if (KEY(VK_DOWN))
 	{
-		pos.y -= 3;
+		pos.y -= 3 * DT;
 	}
 }
 	   

@@ -29,7 +29,11 @@
 #define	WINSIZEY	720
 #define WINSTYLE	WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
 
+#define DT			CTimeManager::getInst()->GetDT();
 
+#define KEY			CKeyManager::getInst()->GetButton(vk_key);
+#define KEYDOWN			CKeyManager::getInst()->GetButtonDown(vk_key);
+#define KEYUP			CKeyManager::getInst()->GetButtonUP(vk_key);
 //========================================
 //## 전역변수(인스턴스, 윈도우 핸들)	##
 //========================================
