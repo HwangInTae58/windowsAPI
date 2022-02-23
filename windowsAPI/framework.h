@@ -14,7 +14,7 @@
 #include <memory.h>
 #include <tchar.h>
 #include <string.h>
-
+#include <vector>
 using namespace std;
 
 #include "SingleTon.h"
