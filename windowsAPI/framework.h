@@ -15,6 +15,8 @@
 #include <tchar.h>
 #include <string.h>
 #include <vector>
+#include <locale>
+
 using namespace std;
 
 #include "SingleTon.h"
@@ -55,10 +57,10 @@ POINT CenterPoint(RECT& r);
 
 enum class GROUP_TYPE
 {
-	Default,
-	Player,
-	Missile,
-	Monster,
+	Default,	// 0
+	Player,		// 1
+	Missile,	// 2	
+	Monster,	// 3
 
 	SIZE,
 };
