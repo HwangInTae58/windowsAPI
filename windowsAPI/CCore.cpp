@@ -1,5 +1,7 @@
 #include "framework.h"
 #include "CCore.h"
+#include "CScene.h"
+
 #define CHAR_X_LEN 20
 #define CHAR_Y_LEN 20
 
@@ -23,6 +25,8 @@ void CCore::update()
 {
 	CTimeManager::getInst()->update();
 	CKeyManager::getInst()->update();
+	CSceneManager
+
 	if (KEY(VK_LEFT))
 	{
 		pos.x -= 3 * DT;

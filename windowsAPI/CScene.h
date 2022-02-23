@@ -13,7 +13,8 @@ private:
 	wstring		m_strName;	//Scene 이름
 public:
 	CScene();
-	~CScene();
+	// 소멸자를 자식소멸자부터 불러야 되는데 가상함수 안붙이면 부모소멸자를 부른다
+	virtual ~CScene();
 	
 	void SetName(const wstring& _strName)
 	{

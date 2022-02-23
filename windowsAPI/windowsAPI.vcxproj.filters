@@ -31,6 +31,12 @@
     <Filter Include="Engine\Scene">
       <UniqueIdentifier>{b5b3ef0c-be77-4c49-a018-c9f86ca7a08c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Scene\StartScene">
+      <UniqueIdentifier>{a03c560b-3caf-4b50-87a2-00c853767882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene\SceneTool">
+      <UniqueIdentifier>{98470bee-ba5d-4451-946e-957d23b4c0a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -72,6 +78,9 @@
     <ClInclude Include="CSceneManager.h">
       <Filter>Engine\Manager</Filter>
     </ClInclude>
+    <ClInclude Include="StartScene.h">
+      <Filter>Engine\Scene\StartScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="windowsAPI.cpp">
@@ -94,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="CSceneManager.cpp">
       <Filter>Engine\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="StartScene.cpp">
+      <Filter>Engine\Scene\StartScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

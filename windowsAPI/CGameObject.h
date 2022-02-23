@@ -7,7 +7,7 @@ private:
 
 public:
 	CGameObject();
-	~CGameObject();
+	virtual ~CGameObject();
 
 	virtual void update() {};
 	virtual void render(HDC hDC);

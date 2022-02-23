@@ -23,6 +23,7 @@ using namespace std;
 #include "CCore.h"
 #include "CTimeManager.h"
 #include "CKeyManager.h"
+#include "CSceneManager"
 #include "Struct.h"
 //========================================
 //##			디파인문				##
@@ -61,6 +62,15 @@ enum class GROUP_TYPE
 	Player,		// 1
 	Missile,	// 2	
 	Monster,	// 3
+
+	SIZE,
+};
+
+enum class SCENE_TYPE
+{
+	TOOL,
+	START,
+	STAGE1,
 
 	SIZE,
 };
