@@ -15,7 +15,7 @@ CKeyManager::~CKeyManager()
 
 void CKeyManager::update()
 {
-	// GetFocus 지금 활성화된 핸들값을 가져오는 함수
+	// GetFocus 지금 활성화된 핸들값(윈도우)을 가져오는 함수
 	HWND curWnd = GetFocus();
 	if (hWnd != curWnd) {
 		//윈도우가 선택된 상태가 아니라면 모든 키입력을 false해준다

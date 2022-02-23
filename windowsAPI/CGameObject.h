@@ -13,7 +13,7 @@ public:
 	virtual void render(HDC hDC);
 
 	void SetPos(fPoint pos);
-	void SetScake(fPoint scsle);
+	void SetScale(fPoint scsle);
 
 	fPoint GetPos();
 	fPoint GetScale();

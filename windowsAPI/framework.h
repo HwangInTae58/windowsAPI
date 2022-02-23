@@ -21,7 +21,7 @@ using namespace std;
 #include "CCore.h"
 #include "CTimeManager.h"
 #include "CKeyManager.h"
-
+#include "Struct.h"
 //========================================
 //##			디파인문				##
 //========================================
@@ -48,3 +48,17 @@ extern HWND hWnd;
 static POINT pos;
 static PAINTSTRUCT ps;
 POINT CenterPoint(RECT& r);
+
+//========================================
+//##			그룹				##
+//========================================
+
+enum class GROUP_TYPE
+{
+	Default,
+	Player,
+	Missile,
+	Monster,
+
+	SIZE,
+};

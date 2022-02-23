@@ -1,4 +1,5 @@
 #pragma once
+#include "SingleTon.h"
 #define VKEY_SIZE  0xFF //Å°ÀÇ °¹¼ö
 
 class CKeyManager
