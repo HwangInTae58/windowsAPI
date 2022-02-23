@@ -8,7 +8,7 @@ class CScene
 {
 private:
 
-	vector<CGameObject*> m_arrvecObj[]
+	vector<CGameObject*> m_arrvecObj[];
 
 public:
 	CScene();
