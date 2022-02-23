@@ -12,9 +12,8 @@ private:
 
 public:
 	CSceneManager();
-	~CSceneManager();
+	virtual ~CSceneManager();
 
 	void init();
 
 };
-

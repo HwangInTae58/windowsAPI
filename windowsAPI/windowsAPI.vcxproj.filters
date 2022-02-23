@@ -75,11 +75,11 @@
     <ClInclude Include="Struct.h">
       <Filter>Util</Filter>
     </ClInclude>
-    <ClInclude Include="CSceneManager.h">
-      <Filter>Engine\Manager</Filter>
-    </ClInclude>
     <ClInclude Include="StartScene.h">
       <Filter>Engine\Scene\StartScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneManager.h">
+      <Filter>Engine\Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -101,11 +101,11 @@
     <ClCompile Include="CScene.cpp">
       <Filter>Engine\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="CSceneManager.cpp">
-      <Filter>Engine\Manager</Filter>
-    </ClCompile>
     <ClCompile Include="StartScene.cpp">
       <Filter>Engine\Scene\StartScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneManager.cpp">
+      <Filter>Engine\Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

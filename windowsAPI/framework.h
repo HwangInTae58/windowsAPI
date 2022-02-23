@@ -23,8 +23,8 @@ using namespace std;
 #include "CCore.h"
 #include "CTimeManager.h"
 #include "CKeyManager.h"
-#include "CSceneManager"
 #include "Struct.h"
+#include "CSceneManager.h"
 //========================================
 //##			디파인문				##
 //========================================
