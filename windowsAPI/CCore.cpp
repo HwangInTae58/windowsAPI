@@ -25,34 +25,17 @@ void CCore::update()
 {
 	CTimeManager::getInst()->update();
 	CKeyManager::getInst()->update();
-	
+	CSceneManager::getInst()->update();
 
-	if (KEY(VK_LEFT))
-	{
-		pos.x -= 3 * DT;
-	}
 
-	if (KEY(VK_RIGHT))
-	{
-		pos.x += 3 * DT;
-	}
-
-	if (KEY(VK_UP))
-	{
-		pos.y += 3 * DT;
-	}
-
-	if (KEY(VK_DOWN))
-	{
-		pos.y -= 3 * DT;
-	}
 }
 	   
 
 void CCore::render()
 {
-	Ellipse(m_hMemDC, 50 , 50  , 10 , 10 );
+	Rectangle(m_hMemDC, -1, -1, WINSIZEX + 1, WINSIZEY + 1);
 	
+	CSceneManager::getInst()->render(m_hMemDC);
 	// memDC에 그린 작업을 다시 윈도우 DC로 복사
 	BitBlt(m_hDC, 0, 0, WINSIZEX, WINSIZEY, m_hMemDC, 0, 0, SRCCOPY);
 	
@@ -64,6 +47,7 @@ void CCore::init()
 	CTimeManager::getInst()->init();
 	CKeyManager::getInst()->init();
 	CSceneManager::getInst()->init();
+
 	// 게임 윈도우의 DC 핸들값 가져오기
 	m_hDC = GetDC(hWnd);
 
