@@ -25,7 +25,7 @@ void CCore::update()
 {
 	CTimeManager::getInst()->update();
 	CKeyManager::getInst()->update();
-	CSceneManager
+	
 
 	if (KEY(VK_LEFT))
 	{
@@ -63,6 +63,7 @@ void CCore::init()
 	// 게임 초기화 작업 진행
 	CTimeManager::getInst()->init();
 	CKeyManager::getInst()->init();
+	CSceneManager::getInst()->init();
 	// 게임 윈도우의 DC 핸들값 가져오기
 	m_hDC = GetDC(hWnd);
 

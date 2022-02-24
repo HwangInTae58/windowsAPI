@@ -1,6 +1,6 @@
 #pragma once
 
-
+//씬은 사용이 목적이 아니라 상속이 목적
 //전방선언 : 전방선언으로 컴파일이 재확인하여 꼬이는걸 막는다.
 class CGameObject;
 
@@ -14,7 +14,7 @@ private:
 public:
 	CScene();
 	// 소멸자를 자식소멸자부터 불러야 되는데 가상함수 안붙이면 부모소멸자를 부른다
-	virtual ~CScene();
+	virtual ~CScene()=0;
 	
 	void SetName(const wstring& _strName)
 	{

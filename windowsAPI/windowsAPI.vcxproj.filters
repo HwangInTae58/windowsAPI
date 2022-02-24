@@ -60,9 +60,6 @@
     <ClInclude Include="CTimeManager.h">
       <Filter>Engine\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="CenterPoint.h">
-      <Filter>Util</Filter>
-    </ClInclude>
     <ClInclude Include="CKeyManager.h">
       <Filter>Engine\Manager</Filter>
     </ClInclude>
