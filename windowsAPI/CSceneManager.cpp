@@ -13,6 +13,7 @@ CSceneManager::CSceneManager()
 	m_pCurScene = nullptr;
 }
 
+
 CSceneManager::~CSceneManager()
 {
 	// æ¿ ªË¡¶
