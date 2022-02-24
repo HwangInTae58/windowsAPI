@@ -6,16 +6,6 @@ class CGameObject;
 
 class CScene
 {
-private:
-	//오브젝트를 저장 및 관리할 벡터를 그룹 개수만큼 선언
-	vector<CGameObject*> m_arrObj[(UINT)GROUP_TYPE::Size];
-
-	// wstring : wchar_t가 string 문자열로 들어간 타입
-	wstring		m_strName;	//Scene 이름
-
-protected:
-	void AddObject(CGameObject* _pObj, GROUP_TYPE _eType);
-
 public:
 	CScene();
 	// 소멸자를 자식소멸자부터 불러야 되는데 가상함수 안붙이면 부모소멸자를 부른다
@@ -29,7 +19,15 @@ public:
 
 	void update();
 	void render(HDC hDc);
+private:
+	//오브젝트를 저장 및 관리할 벡터를 그룹 개수만큼 선언
+	vector<CGameObject*> m_arrObj[(UINT)GROUP_TYPE::Size];
 
-	
+	// wstring : wchar_t가 string 문자열로 들어간 타입
+	wstring		m_strName;	//Scene 이름
+
+protected:
+	void AddObject(CGameObject* _pObj, GROUP_TYPE _eType);
+
 };
 

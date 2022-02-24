@@ -1,14 +1,16 @@
 #pragma once
 
+//TODO : ÀÌÂÊ ¹®Á¦ÀÎµ¥
 class CScene;
 
 class CSceneManager
 {
+private:
 	SINGLETON(CSceneManager);
 
-private:
-	CScene* m_arrScene[(int)SCENE_TYPE::Size];	//¾À ¸ñ·Ï
-	CScene* m_pCurScene;
+
+	CScene* m_arrScene[(int)SCENE_TYPE::Size];	//	¸ðµç ¾À ¸ñ·Ï
+	CScene* m_pCurScene;						//	ÇöÁ¦ ¾À ¸ñ·Ï
 
 public:
 	CSceneManager();

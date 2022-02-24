@@ -9,7 +9,7 @@ public:
 	CGameObject();
 	virtual ~CGameObject();
 
-	virtual void update() {};
+	virtual void update();
 	virtual void render(HDC hDC);
 
 	void SetPos(fPoint pos);

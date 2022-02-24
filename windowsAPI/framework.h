@@ -20,6 +20,8 @@
 
 #define PHI 3.141592
 using namespace std;
+
+
 #include "SingleTon.h"
 #include "CCore.h"
 #include "CTimeManager.h"
@@ -42,16 +44,7 @@ using namespace std;
 #define KEY(vk_key)					CKeyManager::getInst()->GetButton(vk_key);
 #define KEYDOWN(vk_key)				CKeyManager::getInst()->GetButtonDown(vk_key);
 #define KEYUP(vk_key)				CKeyManager::getInst()->GetButtonUP(vk_key);
-//========================================
-//## 전역변수(인스턴스, 윈도우 핸들)	##
-//========================================
 
-
-extern HINSTANCE hInst;
-extern HWND hWnd;
-static POINT pos;
-static PAINTSTRUCT ps;
-POINT CenterPoint(RECT& r);
 
 //========================================
 //##			그룹				##
@@ -75,3 +68,13 @@ enum class SCENE_TYPE
 
 	Size,
 };
+
+
+//========================================
+//## 전역변수(인스턴스, 윈도우 핸들)	##
+//========================================
+extern HINSTANCE hInst;
+extern HWND hWnd;
+static POINT pos;
+static PAINTSTRUCT ps;
+
