@@ -4,10 +4,13 @@
 
 
 CSceneManager::CSceneManager()
-	: m_arrScene{}, m_pCurScene(nullptr)
 {
 	//현제 씬 초기화
-	
+	for (int i = 0; i < (int)SCENE_TYPE::Size; i++)
+	{
+		m_arrScene[i] = nullptr;
+	}
+	m_pCurScene = nullptr;
 }
 
 CSceneManager::~CSceneManager()
@@ -41,4 +44,9 @@ void CSceneManager::update()
 void CSceneManager::render(HDC hDc)
 {
 	m_pCurScene->render(hDc);
+}
+
+CScene* CSceneManager::GetCurScene()
+{
+	return m_pCurScene;
 }

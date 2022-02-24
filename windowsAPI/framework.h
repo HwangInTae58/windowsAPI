@@ -14,37 +14,24 @@
 #include <memory.h>
 #include <tchar.h>
 #include <string.h>
-#include <vector>
 #include <locale>
 #include <math.h>
+#include <assert.h>
 
-#define PHI 3.141592
+
+#include <vector>
+#include <map>
+
+
 using namespace std;
 
 
+
+
+
+
 #include "SingleTon.h"
-#include "CCore.h"
-#include "CTimeManager.h"
-#include "CKeyManager.h"
 #include "Struct.h"
-#include "CSceneManager.h"
-//========================================
-//##			디파인문				##
-//========================================
-
-#define WINSTARTX   100
-#define WINSTARTY   100
-#define WINSIZEX	1280
-#define	WINSIZEY	720
-#define WINSTYLE	WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
-
-#define DT							CTimeManager::getInst()->GetDT();
-
-
-#define KEY(vk_key)					CKeyManager::getInst()->GetButton(vk_key);
-#define KEYDOWN(vk_key)				CKeyManager::getInst()->GetButtonDown(vk_key);
-#define KEYUP(vk_key)				CKeyManager::getInst()->GetButtonUP(vk_key);
-
 
 //========================================
 //##			그룹				##
@@ -70,11 +57,36 @@ enum class SCENE_TYPE
 };
 
 
+#include "CCore.h"
+#include "CTimeManager.h"
+#include "CKeyManager.h"
+#include "CSceneManager.h"
+//========================================
+//##			디파인문				##
+//========================================
+
+#define WINSTARTX   100
+#define WINSTARTY   100
+#define WINSIZEX	1280
+#define	WINSIZEY	720
+#define WINSTYLE	WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+
+#define DT							CTimeManager::getInst()->GetDT();
+
+#define PHI 3.141592
+
+#define KEY(vk_key)					CKeyManager::getInst()->GetButton(vk_key);
+#define KEYDOWN(vk_key)				CKeyManager::getInst()->GetButtonDown(vk_key);
+#define KEYUP(vk_key)				CKeyManager::getInst()->GetButtonUP(vk_key);
+
 //========================================
 //## 전역변수(인스턴스, 윈도우 핸들)	##
 //========================================
 extern HINSTANCE hInst;
 extern HWND hWnd;
-static POINT pos;
-static PAINTSTRUCT ps;
+
+
+
+
+
 
