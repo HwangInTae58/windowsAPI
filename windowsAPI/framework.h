@@ -16,9 +16,10 @@
 #include <string.h>
 #include <vector>
 #include <locale>
+#include <math.h>
 
+#define PHI 3.141592
 using namespace std;
-
 #include "SingleTon.h"
 #include "CCore.h"
 #include "CTimeManager.h"
@@ -37,8 +38,8 @@ using namespace std;
 
 #define DT							CTimeManager::getInst()->GetDT();
 
-template<typename T>
-constexpr auto KEY(T vk_key) { return CKeyManager::getInst()->GetButton(vk_key);; }
+
+#define KEY(vk_key)					CKeyManager::getInst()->GetButton(vk_key);
 #define KEYDOWN(vk_key)				CKeyManager::getInst()->GetButtonDown(vk_key);
 #define KEYUP(vk_key)				CKeyManager::getInst()->GetButtonUP(vk_key);
 //========================================
@@ -63,7 +64,7 @@ enum class GROUP_TYPE
 	Missile,	// 2	
 	Monster,	// 3
 
-	SIZE,
+	Size,
 };
 
 enum class SCENE_TYPE
@@ -72,5 +73,5 @@ enum class SCENE_TYPE
 	START,
 	STAGE1,
 
-	SIZE,
+	Size,
 };
